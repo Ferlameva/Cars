@@ -1,0 +1,6 @@
+== README
+
+This is what you guys need to start your demo... pull/clone this and start working ur magic on it.
+all the gems u will need to install are in the gem file
+the scriptfile and model file are just a reference to what is in the model use it ONLY AS A REFERENCE
+
