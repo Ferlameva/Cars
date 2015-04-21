@@ -1,0 +1,45 @@
+<h1>Car#index</h1>
+<h3>Index All Cars</h3>
+
+<div>
+<table class = "table-fill">
+
+		<tr>
+			<td>Model</td>
+			<td>Year</td>
+			<td>Line</td>
+			<td>Price</td>
+			<td>View Specs</td>
+		</tr>
+		<!-- <table> -->
+			<% Brand.all.each do |b| %>
+			<th><%= b.name %></th>
+			<tr>
+				<% b.models.all.each do |bm| %>
+				<tr rawspan= <%= b.models.size.to_s %> >
+					<td><%= bm.name %></td>
+					<td><%= bm.model_year %></td>
+					<% bm.lines.all.each do |bml| %>
+					<tr rawspan= <%= bm.lines.size.to_s %>>
+						<td><%= link_to bml.name, '#' %></td>
+						<% if bml.price == nil %>
+						<td> 0 </td>
+						<% else %>
+						<td><%= bml.price %></td>
+						<% end %>
+						<!-- <td><%= link_to 'View Specifications', '#' %></td> -->
+					</tr>
+					<% end %>
+				</tr>
+				<% end %>
+			</tr>
+			<% end %>
+
+		<!-- </table> -->
+
+
+	</table>
+
+	<%= link_to 'Create Car', new_car_path %>
+
+</div>

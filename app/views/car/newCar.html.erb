@@ -1,0 +1,28 @@
+<h1>Car#newCar</h1>
+<h3>Create New Car</h3>
+
+<%= form_for :createCar do |c| %>
+
+<%= c.label 'Brand' %>
+<%= c.text_field :brand %>
+
+<%= c.label 'Model' %>
+<%= c.text_field :model %>
+
+<%= c.label 'Year' %>
+<%= c.text_field :year %>
+
+<%= c.label 'Line' %>
+<%= c.text_field :line %>
+
+<%= c.label 'Price' %>
+<%= c.text_field :price %>
+<br>
+<br>
+
+<%= c.label 'Specs' %>
+<!-- <%= c.text_field :brand %> -->
+
+<%= c.submit 'Create Car' %>
+
+<% end %>
